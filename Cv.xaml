@@ -1,0 +1,103 @@
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Cv.MainPage"
+             BackgroundColor="#F7F7F7">
+
+    <ScrollView>
+        <StackLayout Padding="20" Spacing="20" BackgroundColor="White">
+
+            <!-- Header -->
+            <StackLayout BackgroundColor="#4A90E2" Padding="20" HorizontalOptions="FillAndExpand">
+                <Frame BackgroundColor="Transparent"
+                       Padding="0"
+                       HeightRequest="150"
+                       WidthRequest="150"
+                       CornerRadius="75"
+                       HorizontalOptions="Center"
+                       VerticalOptions="Center">
+                    <Image Source="https://image.freepik.com/vector-gratis/dibujos-animados-perfil-mujer_18591-58475.jpg"
+                           Aspect="AspectFill"
+                           HorizontalOptions="Center"
+                           VerticalOptions="Center"/>
+                </Frame>
+
+                <StackLayout VerticalOptions="Center" Spacing="5">
+                    <!-- Nombre dinámico -->
+                    <Entry x:Name="NameEntry" Placeholder="Ingresa tu nombre" FontSize="28" TextColor="White" HorizontalTextAlignment="Center" />
+                    <!-- Ocupación dinámica -->
+                    <Entry x:Name="OccupationEntry" Placeholder="Ingresa tu ocupación" FontSize="18" TextColor="#D3D3D3" HorizontalTextAlignment="Center" />
+                </StackLayout>
+            </StackLayout>
+
+            <!-- Contact Info -->
+            <StackLayout BackgroundColor="#E5E5E5" Padding="20" Spacing="15">
+                <Label Text="Información de Contacto" FontSize="22" FontAttributes="Bold" TextColor="#333" />
+                <StackLayout Orientation="Horizontal" Spacing="15">
+                    <Image Source="https://cdn-icons-png.flaticon.com/128/126/126341.png" WidthRequest="20" HeightRequest="20" />
+                    <!-- Número dinámico -->
+                    <Entry x:Name="PhoneEntry" Placeholder="Ingresa tu número" FontSize="16" TextColor="#555" />
+                </StackLayout>
+                <StackLayout Orientation="Horizontal" Spacing="15">
+                    <Image Source="https://cdn-icons-png.flaticon.com/128/3494/3494693.png" WidthRequest="20" HeightRequest="20" />
+                    <!-- Correo dinámico -->
+                    <Entry x:Name="EmailEntry" Placeholder="Ingresa tu correo" FontSize="16" TextColor="#555" />
+                </StackLayout>
+                <StackLayout Orientation="Horizontal" Spacing="15">
+                    <Image Source="https://cdn-icons-png.flaticon.com/128/731/731582.png" WidthRequest="20" HeightRequest="20" />
+                    <!-- Ubicación dinámica -->
+                    <Entry x:Name="LocationEntry" Placeholder="Ingresa tu ubicación" FontSize="16" TextColor="#555" />
+                </StackLayout>
+                <StackLayout Orientation="Horizontal" Spacing="15">
+                    <Image Source="https://cdn-icons-png.flaticon.com/128/61/61109.png" WidthRequest="20" HeightRequest="20" />
+                    <!-- LinkedIn dinámico -->
+                    <Entry x:Name="LinkedInEntry" Placeholder="Ingresa tu LinkedIn" FontSize="16" TextColor="#555" />
+                </StackLayout>
+            </StackLayout>
+
+            <!-- Profile -->
+            <StackLayout Padding="20" Spacing="15">
+                <Label Text="Perfil Profesional" FontSize="22" FontAttributes="Bold" TextColor="#333" />
+                <Editor x:Name="ProfileEditor" Placeholder="Ingresa tu perfil profesional" FontSize="16" TextColor="#555" />
+            </StackLayout>
+
+            <!-- Experience -->
+            <StackLayout Padding="20" Spacing="20">
+                <Label Text="Experiencia Laboral" FontSize="22" FontAttributes="Bold" TextColor="#333" />
+                <Frame Padding="10" BackgroundColor="#F1F1F1" CornerRadius="8">
+                    <StackLayout>
+                        <Label Text="Experiencia en tu trabajo" FontSize="18" FontAttributes="Bold" TextColor="#333" />
+                        <Editor x:Name="ExperienceEditor" Placeholder="Detalles de tu experiencia" FontSize="16" TextColor="#555" />
+                    </StackLayout>
+                </Frame>
+            </StackLayout>
+
+            <!-- Education -->
+            <StackLayout Padding="20" Spacing="20">
+                <Label Text="Educación" FontSize="22" FontAttributes="Bold" TextColor="#333" />
+                <Frame Padding="10" BackgroundColor="#F1F1F1" CornerRadius="8">
+                    <StackLayout>
+                        <Label Text="Tu formación educativa" FontSize="18" FontAttributes="Bold" TextColor="#333" />
+                        <Editor x:Name="EducationEditor" Placeholder="Detalles de tu educación" FontSize="16" TextColor="#555" />
+                    </StackLayout>
+                </Frame>
+            </StackLayout>
+
+            <!-- Skills -->
+            <StackLayout Padding="20" Spacing="20">
+                <Label Text="Habilidades" FontSize="22" FontAttributes="Bold" TextColor="#333" />
+                <Editor x:Name="SkillsEditor" Placeholder="Ingresa tus habilidades" FontSize="16" TextColor="#555" />
+            </StackLayout>
+
+            <!-- Languages -->
+            <StackLayout Padding="20" Spacing="20">
+                <Label Text="Idiomas" FontSize="22" FontAttributes="Bold" TextColor="#333" />
+                <Editor x:Name="LanguagesEditor" Placeholder="Ingresa tus idiomas" FontSize="16" TextColor="#555" />
+            </StackLayout>
+
+            <!-- Enviar Botón -->
+            <Button Text="Enviar" BackgroundColor="#4A90E2" TextColor="White" Command="{Binding CreateCVCommand}" />
+        </StackLayout>
+    </ScrollView>
+
+</ContentPage>
+
